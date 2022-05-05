@@ -7,7 +7,7 @@ if __name__ == "__main__":
     elif lens == 1:
         print("1 argument:")
         print("1: " + argv[1])
-    elif:
+    else:
         print(f"{lens - 1} arguments:")
         for i in range(1, lens):
             print(f"{i}: {argv[i]}")
