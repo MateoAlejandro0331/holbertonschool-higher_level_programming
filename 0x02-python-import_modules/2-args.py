@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+from sys import argv
 if __name__ == "__main__":
-    from sys import argv
     lens = len(argv)
     if lens == 1:
         print("0 arguments.")
