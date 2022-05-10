@@ -3,10 +3,6 @@ def add_tuple(tuple_a=(), tuple_b=()):
     newlist = []
     lista = list(tuple_a + (0, 0))
     listb = list(tuple_b + (0, 0))
-    if len(lista) < 2:
-        lista.append(0)
-    elif len(listb) < 2:
-        listb.append(0)
     aux = lista[0] + listb[0]
     newlist.append(aux)
     aux = lista[1] + listb[1]
