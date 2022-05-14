@@ -1,6 +1,9 @@
 #!/usr/bin/env
 def print_last_digit(number):
-    last = str(number)
-    digit = int(last[-1])
-    print(f"{digit}", end="")
-    return digit
+    if number > 0:
+        print(f"{number % 10}", end="")
+        return number % 10
+    else:
+        number = number * -1
+        print(f"{number % 10}", end="")
+        return number % 10
