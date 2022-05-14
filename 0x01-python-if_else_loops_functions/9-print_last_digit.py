@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env
 def print_last_digit(number):
     last = str(number)
     digit = int(last[-1])
