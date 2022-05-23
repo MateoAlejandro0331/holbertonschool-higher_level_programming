@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
     try:
-        for idx, i in enumerate(my_list[:x+1]):
+        for idx, i in enumerate(my_list[:x]):
             print(i, end="")
         print()
         return idx + 1
