@@ -5,4 +5,8 @@
 class Square:
     """Size private atribute"""
     def __init__(self, num):
-        self.__size = num * num
+        self.size = num
+    
+    @property
+    def num(self):
+        return self.__size
