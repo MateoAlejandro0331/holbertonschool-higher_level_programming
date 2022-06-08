@@ -1,0 +1,35 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Passing -1:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", -1)
+    Traceback (most recent call last):
+    ...
+    TypeError: width must be greater than 0
+
+Passing 0:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", 0)
+    Traceback (most recent call last):
+    ...
+    TypeError: width must be greater than 0
+
+Passing string:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", "Mateo")
+    Traceback (most recent call last):
+    ...
+    TypeError: width must be an integer
+
+Passing more paramtters:
+    >>> bg = BaseGeometry("hola")
+    Traceback (most recent call last):
+    ...
+    TypeError: BaseGeometry() takes no arguments
+
+Passing float:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", 5.9)
+    Traceback (most recent call last):
+    ...
+    TypeError: width must be an integer
