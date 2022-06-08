@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 """Import the class"""
-from curses.textpad import rectangle
-
-
 Rectangle = __import__('8-rectangle').Rectangle
 """
     Class Rectangle that inherits from BaseGeometry
