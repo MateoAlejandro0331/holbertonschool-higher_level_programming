@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Import module"""
 import json
 """
     Funtion that returns the JSON representation
