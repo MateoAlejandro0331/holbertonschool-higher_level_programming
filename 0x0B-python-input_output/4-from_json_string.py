@@ -7,6 +7,6 @@ import json
 
 
 def from_json_string(my_str):
-    """My Funtion"""
+    """My Funtion to returns representation"""
     represent = json.loads(my_str)
     return represent
