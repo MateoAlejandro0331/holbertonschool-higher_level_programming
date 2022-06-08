@@ -5,6 +5,7 @@ Rectangle = __import__('8-rectangle').Rectangle
     Class Rectangle that inherits from BaseGeometry
 """
 
+
 class Square(Rectangle):
     """
         My class
