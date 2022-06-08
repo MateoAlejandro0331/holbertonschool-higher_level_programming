@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Import the class"""
-Rectangle = __import__('8-rectangle').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 """
     Class Rectangle that inherits from BaseGeometry
 """
