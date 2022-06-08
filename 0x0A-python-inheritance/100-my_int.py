@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
     Import the class
-    
 """
+
 
 class MyInt(int):
     """ My class"""
