@@ -8,6 +8,7 @@ import json
 
 
 def save_to_json_file(my_obj, filename):
+    """My funtion"""
     with open(filename, 'w', encoding='utf-8') as file:
         represent = json.dumps(my_obj)
         file.write(represent)
