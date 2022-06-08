@@ -1,9 +1,4 @@
-=============================
- doctest_in_07-base_geometry
-=============================
-
-import of the module to be tested:
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Test_1: base test:
     >>> bg = BaseGeometry()
