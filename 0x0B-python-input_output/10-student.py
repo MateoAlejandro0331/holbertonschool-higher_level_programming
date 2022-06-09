@@ -19,4 +19,3 @@ class Student:
             if key in attrs:
                 mydict.setdefault(key, value)
         return mydict
-        
