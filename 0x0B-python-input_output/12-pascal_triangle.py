@@ -6,6 +6,10 @@
 
 
 def pascal_triangle(n):
+    """
+        My list - pascal triangle
+        rows - rows to create the triangle
+    """
     mylist = []
     rows = []
     for i in range(n):
