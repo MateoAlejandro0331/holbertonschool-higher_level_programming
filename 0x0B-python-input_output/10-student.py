@@ -12,10 +12,11 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        mydict = dict()
-        if attrs:
-            for key, value in self.__dict__.items():
-                if key in attrs:
-                    mydict.setdefault(key, value)
-            return mydict
-        return self.__dict__
+        mydict = {}
+        if attrs is None:
+            return vars(self)
+        for key, value in self.__dict__.items():
+            if key in attrs:
+                mydict.setdefault(key, value)
+        return mydict
+        
