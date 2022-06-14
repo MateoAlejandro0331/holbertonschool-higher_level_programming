@@ -3,6 +3,7 @@
     Class Base
 """
 import json
+from typing_extensions import Self
 
 
 class Base:
@@ -31,14 +32,11 @@ class Base:
     def save_to_file(cls, list_objs):
         """Method to save a json file"""
         mylist = []
-        if str(cls) == "<class 'models.rectangle.Rectangle'>":
-            filename = "Rectangle.json"
-        if str(cls) == "<class 'models.square.Square'":
-            filename = "Square.json"
-        if list_objs is None:
-            with open(filename, 'w', encoding='utf-8') as file:
-                represent = json.dumps(mylist)
-                file.write(represent)
-        else:
-            with open(filename, 'r+', encoding='utf-8') as file:
-                mylist = json.load(file)
+        filename = f"{cls.__name__}.json"
+
+        if list_objs is not None:
+            for objs in list_objs:
+                mylist.append(cls.to_dictionary(objs))
+
+        with open(filename, "w", encoding="utf-8") as file:
+            file.write(cls.to_json_string(mylist))
