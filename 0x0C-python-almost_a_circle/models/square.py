@@ -15,14 +15,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """Getter method for size"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """Setter method for size"""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """Method to update the value of every single atributte"""
         if len(args) > 0:
             self.id = args[0]
         if len(args) > 1:
@@ -42,6 +45,7 @@ class Square(Rectangle):
                         self.width = value
 
     def to_dictionary(self):
+        """Method to return a class dictrionary"""
         return {
                 "id": self.id,
                 "size": self.width,
@@ -50,4 +54,5 @@ class Square(Rectangle):
                 }
 
     def __str__(self):
+        """String representation of the class"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"

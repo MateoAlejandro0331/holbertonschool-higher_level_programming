@@ -22,12 +22,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """Method to return a json representation"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Method to save a json file"""
         mylist = []
         if str(cls) == "<class 'models.rectangle.Rectangle'>":
             filename = "Rectangle.json"
