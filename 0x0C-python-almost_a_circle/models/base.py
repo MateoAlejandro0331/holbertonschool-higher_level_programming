@@ -3,7 +3,6 @@
     Class Base
 """
 import json
-from typing_extensions import Self
 
 
 class Base:
@@ -37,6 +36,5 @@ class Base:
         if list_objs is not None:
             for objs in list_objs:
                 mylist.append(cls.to_dictionary(objs))
-
         with open(filename, "w", encoding="utf-8") as file:
             file.write(cls.to_json_string(mylist))
