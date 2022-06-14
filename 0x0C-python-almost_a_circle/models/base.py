@@ -27,6 +27,14 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
+    @staticmethod
+    def from_json_string(json_string):
+        """My Funtion to returns python representation of json"""
+        if json_string is None:
+            return []
+        represent = json.loads(json_string)
+        return represent
+
     @classmethod
     def save_to_file(cls, list_objs):
         """Method to save a json file"""
