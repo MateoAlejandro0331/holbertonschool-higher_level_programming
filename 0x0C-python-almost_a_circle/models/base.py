@@ -4,6 +4,8 @@
 """
 import json
 
+import os.path
+
 
 class Base:
     """
@@ -57,3 +59,16 @@ class Base:
             dummy = cls(5)
             dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Load from a json file to convert an object"""
+        filename = f"{cls.__name__}.json"
+        _object = []
+        if os.path.exists(filename):
+            with open(filename, "r", encoding="utf-8") as file:
+                read = file.read()
+                obj = cls.from_json_string(read)
+                for ob in obj:
+                    _object.append(cls.create(**ob))
+        return _object
