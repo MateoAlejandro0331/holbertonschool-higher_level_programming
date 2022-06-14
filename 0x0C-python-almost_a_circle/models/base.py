@@ -46,3 +46,14 @@ class Base:
                 mylist.append(cls.to_dictionary(objs))
         with open(filename, "w", encoding="utf-8") as file:
             file.write(cls.to_json_string(mylist))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes already set"""
+        if cls.__name__ == "Rectangle":
+            dummy = cls(2, 2)
+            dummy.update(**dictionary)
+        if cls.__name__ == "Square":
+            dummy = cls(0)
+            dummy.update(**dictionary)
+        return dummy
