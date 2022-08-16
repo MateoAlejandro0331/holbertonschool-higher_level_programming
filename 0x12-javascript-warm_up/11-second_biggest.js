@@ -2,9 +2,14 @@
 
 process.argv.shift();
 process.argv.shift();
-const len = process.argv.length;
+const len = process.argv.length - 2;
 /* for (let i = 0; i < len - 2; i++) {
   process.argv[i] = parseInt(process.argv[i]);
 } */
-process.argv.sort((a, b) => a - b);
-console.log(process.argv[len - 2]);
+if (len < 0 || len === 1) {
+  console.log(1);
+}
+else {
+  process.argv.sort((a, b) => a - b);
+  console.log(process.argv[len]);
+}
