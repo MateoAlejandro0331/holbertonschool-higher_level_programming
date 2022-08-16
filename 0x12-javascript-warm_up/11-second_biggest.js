@@ -6,7 +6,7 @@ const len = process.argv.length;
 /* for (let i = 0; i < len - 2; i++) {
   process.argv[i] = parseInt(process.argv[i]);
 } */
-if (len < 0 || len === 1) {
+if (len === 0 || len === 1) {
   console.log(0);
 }
 else {
