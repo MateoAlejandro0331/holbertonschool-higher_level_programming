@@ -7,7 +7,7 @@ const len = process.argv.length - 2;
   process.argv[i] = parseInt(process.argv[i]);
 } */
 if (len < 0 || len === 1) {
-  console.log(1);
+  console.log('1');
 }
 else {
   process.argv.sort((a, b) => a - b);
