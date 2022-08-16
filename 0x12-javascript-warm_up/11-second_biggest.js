@@ -8,8 +8,7 @@ const len = process.argv.length;
 } */
 if (len === 0 || len === 1) {
   console.log(0);
-}
-else {
+} else {
   process.argv.sort((a, b) => a - b);
   console.log(process.argv[len - 2]);
 }
