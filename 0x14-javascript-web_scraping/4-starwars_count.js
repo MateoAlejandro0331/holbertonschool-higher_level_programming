@@ -13,4 +13,9 @@ axios.get(url).then(function (response) {
       break;
     }
   }
-});
+})
+  .catch(function (error) {
+    if (error.response) {
+      console.log('code: ' + error.response.status);
+    }
+  });
