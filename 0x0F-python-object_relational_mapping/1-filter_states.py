@@ -10,7 +10,7 @@ if __name__ == "__main__":
                                     passwd=argv[2], db=argv[3])
 
     mycursor = database.cursor()
-    mycursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id;")
+    mycursor.execute("SELECT * FROM states WHERE name LIKE 'N%';")
     result = mycursor.fetchall()
     for value in result:
         print(value)
