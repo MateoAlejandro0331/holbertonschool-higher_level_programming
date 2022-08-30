@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""https://www.geeksforgeeks.org/how-to-
+    show-all-tables-in-mysql-using-python/"""
 import MySQLdb
 from sys import argv
 
