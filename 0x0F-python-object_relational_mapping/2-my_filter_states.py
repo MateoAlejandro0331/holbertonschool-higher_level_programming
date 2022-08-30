@@ -10,10 +10,9 @@ if __name__ == "__main__":
     database = MySQLdb.connect(host='localhost', port=3306, user=argv[1],
                                     passwd=argv[2], db=argv[3])
 
-    sql = """SELECT * FROM states WHERE name \
-                LIKE BINARY '%s' ORDER BY id;""" % (argv[4])
     mycursor = database.cursor()
-    mycursor.execute(sql)
+    mycursor.execute("SELECT * FROM states WHERE name LIKE BINARY  \
+                        '{}' ORDER BY id ASC".format(argv[4]))
     result = mycursor.fetchall()
     for value in result:
         print(value)
