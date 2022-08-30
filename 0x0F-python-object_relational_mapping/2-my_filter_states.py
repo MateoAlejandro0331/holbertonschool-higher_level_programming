@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""
-    https://subscription.packtpub.com/book/big-data-and-business-inteliigence
+"""https://subscription.packtpub.com/book/big-data-and-business-inteliigence
     /9781849510189/3/ch03lvl1sec24/using-user-defined-variables"""
+
 import MySQLdb
 from sys import argv
 
