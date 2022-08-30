@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ists all states with a name starting with N (upper N)
-  https://www.geeksforgeeks.org/sql-query-to-find-the-name-of-
-  a-person-whose-name-starts-with-specific-letter/"""
+    https://www.geeksforgeeks.org/sql-query-to-find-the-name-of-
+    a-person-whose-name-starts-with-specific-letter/"""
 import MySQLdb
 from sys import argv
 
