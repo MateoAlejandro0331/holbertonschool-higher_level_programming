@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """https://subscription.packtpub.com/book/big-data-and-business-inteliigence
-    /9781849510189/3/ch03lvl1sec24/using-user-defined-variables"""
+/9781849510189/3/ch03lvl1sec24/using-user-defined-variables"""
 
 import MySQLdb
 from sys import argv
@@ -10,7 +10,7 @@ if __name__ == "__main__":
                                     passwd=argv[2], db=argv[3])
 
     sql = """SELECT * FROM states WHERE name \
-                    LIKE BINARY '%s' ORDER BY id;""" % (argv[4])
+                LIKE BINARY '%s' ORDER BY id;""" % (argv[4])
     mycursor = database.cursor()
     mycursor.execute(sql)
     result = mycursor.fetchall()
