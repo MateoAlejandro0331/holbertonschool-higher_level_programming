@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Takes in an argument and displays all values
-    in the states table of hbtn_0e_0_usa where name matches the argument.
+"""
     https://subscription.packtpub.com/book/big-data-and-business-inteliigence
     /9781849510189/3/ch03lvl1sec24/using-user-defined-variables"""
 import MySQLdb
