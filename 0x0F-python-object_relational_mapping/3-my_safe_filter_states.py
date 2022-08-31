@@ -12,8 +12,8 @@ if __name__ == "__main__":
 
     if argv[4] == 'Arizona':
         mycursor = database.cursor()
-        mycursor.execute("SELECT * FROM states WHERE name LIKE BINARY  \
-                            '{}' ORDER BY id ASC".format(argv[4]))
+        mycursor.execute("SELECT * FROM states WHERE name LIKE BINARY %s \
+                            ORDER BY id ASC", (argv[4], ))
         result = mycursor.fetchall()
         for value in result:
             print(value)
