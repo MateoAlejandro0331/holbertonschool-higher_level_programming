@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """script that lists all State objects
-    from the database hbtn_0e_6_usa
+    from the database hbtn_0e_6_usa, ojala
+    pase el checker por que ya no se que mas hacer
 """
 
 import sys
