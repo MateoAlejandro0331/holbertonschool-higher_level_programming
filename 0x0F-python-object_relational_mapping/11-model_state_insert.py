@@ -22,5 +22,3 @@ if __name__ == "__main__":
     query = sesion.query(State).filter(State.name == 'Louisiana')
     for instance in query:
         print(f"{instance.id}")
-
-
