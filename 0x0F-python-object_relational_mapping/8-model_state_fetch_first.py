@@ -12,6 +12,5 @@ if __name__ == "__main__":
 
     sesion = Session(database)
     """Query to the database"""
-    query = sesion.query(State).filter(State.id == 1)
-    for instance in query:
+    for instance in sesion.query(State).filter(State.id == 1):
         print(f"{instance.id}: {instance.name}")
