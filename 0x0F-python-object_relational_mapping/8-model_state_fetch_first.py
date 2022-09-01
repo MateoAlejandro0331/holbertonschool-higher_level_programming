@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Start link class to table in database 
 """
+from queue import Empty
 import sys
 from model_state import Base, State
 from sqlalchemy.orm import Session
@@ -12,5 +13,8 @@ if __name__ == "__main__":
 
     sesion = Session(database)
     """Query to the database"""
-    for instance in sesion.query(State).filter(State.id == 1):
+    instance = sesion.query(State).first()
+    if instance:
         print(f"{instance.id}: {instance.name}")
+    else:
+        print("Nothing")
