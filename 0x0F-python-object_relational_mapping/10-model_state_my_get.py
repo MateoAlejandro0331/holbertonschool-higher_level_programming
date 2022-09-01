@@ -4,7 +4,6 @@
     the database hbtn_0e_6_usa
 """
 
-from queue import Empty
 import sys
 from model_state import Base, State
 from sqlalchemy.orm import Session
@@ -20,3 +19,5 @@ if __name__ == "__main__":
     for instance in query:
         if sys.argv[4] == instance.name:
             print(f"{instance.id}")
+            exit(0)
+    print("Not found")
