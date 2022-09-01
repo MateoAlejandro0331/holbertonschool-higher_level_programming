@@ -14,7 +14,7 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
 
     sesion = Session(database)
-    query = sesion.query(State).order_by(State.id)
+    query = sesion.query(State).all()
     for instance in query:
         if 'a' in instance.name:
             sesion.delete(instance)
